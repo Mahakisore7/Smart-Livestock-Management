@@ -3,80 +3,83 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # ==========================================
-# --- CONFIGURATION (MATCHED TO YOUR DATA) ---
+# --- CONFIGURATION ---
 # ==========================================
+cow_file_path = r"C:\Users\yashw_d6scpoj\Desktop\Academics\S4\IoT\Projects\Livestock\Codes\cow_1_data.csv"
+goat_file_path = r"C:\Users\yashw_d6scpoj\Desktop\Academics\S4\IoT\Projects\Livestock\Codes\balanced_goat_dataset.csv"
 
-# 1. FILE PATHS
-cow_file_path = "H:\\Datasets_Motion\\1_Walking_1319_20240513_120009.csv"
-goat_file_path = "H:\Datasets_Motion\G1.csv" 
+# CONTROL HOW MUCH DATA TO SEE HERE:
+SAMPLES_TO_SHOW = 3500  # <--- Change this to 1000, 5000, etc.
 
-# 2. COLUMN NAMES (From your Inspector Output)
-# We use the MPU9250 columns for the cow
-cow_cols = ['MPU9250_AX', 'MPU9250_AY', 'MPU9250_AZ']
-
-# We use ax, ay, az for the goat
+cow_cols = ['acc_x', 'acc_y', 'acc_z']
 goat_cols = ['ax', 'ay', 'az']
 
 # ==========================================
-# --- THE LOGIC (Simulation of ESP32) ---
+# --- THE LOGIC (Same as before) ---
 # ==========================================
-
-def get_energy(file_path, cols, animal_name):
+def get_processed_data(file_path, cols, animal_name):
     try:
-        print(f"Reading {animal_name} data...")
+        print(f"Processing {animal_name}...")
         df = pd.read_csv(file_path)
         
-        # 1. Calculate Vector Magnitude (Total Energy)
-        # Formula: sqrt(x^2 + y^2 + z^2)
-        # We use .values ensures we handle numpy arrays correctly
+        # 1. Calculate Raw Energy
         x = df[cols[0]].values
         y = df[cols[1]].values
         z = df[cols[2]].values
+        raw_energy = np.sqrt(x**2 + y**2 + z**2)
         
-        energy = np.sqrt(x**2 + y**2 + z**2)
+        # 2. Baseline & Threshold
+        baseline = np.mean(raw_energy[:300])
+        raw_threshold = baseline * 0.6 
         
-        # 2. Simulate "Baseline Learning" (First 300 data points)
-        # In real life, this would be 3 days. Here, it's the first few seconds.
-        learning_phase = energy[:300]
-        baseline = np.mean(learning_phase)
+        # 3. Normalize
+        norm_energy = raw_energy - baseline
+        norm_threshold = raw_threshold - baseline
         
-        # 3. Simulate "Alert Threshold"
-        # If activity drops below 60% of THIS animal's normal, we alert.
-        alert_threshold = baseline * 0.6
-        
-        print(f"   -> {animal_name} Baseline Set: {baseline:.2f}")
-        print(f"   -> {animal_name} Alert Threshold: {alert_threshold:.2f}")
-        
-        # Return only first 1000 points so the graph isn't messy
-        return energy[:1000], baseline, alert_threshold
+        return norm_energy, norm_threshold
         
     except Exception as e:
-        print(f"ERROR with {animal_name}: {e}")
-        return None, None, None
+        print(f"Error with {animal_name}: {e}")
+        return None, None
 
 # --- EXECUTE ---
-cow_energy, cow_base, cow_thresh = get_energy(cow_file_path, cow_cols, "COW")
-goat_energy, goat_base, goat_thresh = get_energy(goat_file_path, goat_cols, "GOAT")
+cow_energy, cow_alert_line = get_processed_data(cow_file_path, cow_cols, "COW")
+goat_energy, goat_alert_line = get_processed_data(goat_file_path, goat_cols, "GOAT")
 
-# --- PLOT THE EVIDENCE ---
+# --- PLOT (SLICED) ---
 if cow_energy is not None and goat_energy is not None:
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(14, 7))
     
-    # Plot Goat (High Energy)
-    plt.plot(goat_energy, color='orange', alpha=0.6, label='Goat Motion (Raw)')
-    plt.axhline(y=goat_base, color='red', linestyle='-', linewidth=2, label=f'Goat Normal ({goat_base:.1f})')
-    plt.axhline(y=goat_thresh, color='red', linestyle=':', linewidth=2, label='Goat Alert Limit')
+    # === SLICING THE DATA ===
+    # We create a temporary "view" of just the first N samples
+    cow_view = cow_energy[:SAMPLES_TO_SHOW]
+    goat_view = goat_energy[:SAMPLES_TO_SHOW]
     
-    # Plot Cow (Low Energy)
-    plt.plot(cow_energy, color='blue', alpha=0.6, label='Cow Motion (Raw)')
-    plt.axhline(y=cow_base, color='cyan', linestyle='-', linewidth=2, label=f'Cow Normal ({cow_base:.1f})')
-    plt.axhline(y=cow_thresh, color='cyan', linestyle=':', linewidth=2, label='Cow Alert Limit')
+    # --- PLOT COW ---
+    plt.plot(cow_view, label='Cow Activity', color='blue', alpha=0.6, linewidth=1)
+    plt.axhline(cow_alert_line, color='cyan', linestyle='--', linewidth=2, label='Cow Alert Threshold')
     
-    plt.title("Proof: Algorithm Auto-Adapts to Species (Cow vs Goat)", fontsize=14)
-    plt.ylabel("Activity Level (g-force)")
+    # Cow Alerts (Calculated only on the viewed data)
+    under_cow = cow_view < cow_alert_line
+    # np.where returns indices, we plot dots at those indices
+    alert_indices_cow = np.where(under_cow)[0]
+    plt.scatter(alert_indices_cow, cow_view[alert_indices_cow], color='red', s=20, label='Cow Alert', zorder=5)
+
+    # --- PLOT GOAT ---
+    plt.plot(goat_view, label='Goat Activity', color='orange', alpha=0.6, linewidth=1)
+    plt.axhline(goat_alert_line, color='darkred', linestyle='--', linewidth=2, label='Goat Alert Threshold')
+    
+    # Goat Alerts
+    under_goat = goat_view < goat_alert_line
+    alert_indices_goat = np.where(under_goat)[0]
+    plt.scatter(alert_indices_goat, goat_view[alert_indices_goat], color='darkred', s=20, marker='x', label='Goat Alert', zorder=5)
+    
+    # --- DECORATION ---
+    plt.axhline(0, color='black', linewidth=1, label='Baseline (0)')
+    plt.title(f"Activity Monitor: First {SAMPLES_TO_SHOW} Samples", fontsize=16)
+    plt.ylabel("Relative Intensity")
     plt.xlabel("Time (Samples)")
-    plt.legend(loc='upper right')
+    plt.legend(loc='lower right')
     plt.grid(True, alpha=0.3)
     
-    print("Graph generated!")
     plt.show()
