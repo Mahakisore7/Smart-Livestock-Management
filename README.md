@@ -89,7 +89,7 @@ discharge - Monitor respiration rate - Inspect lung sounds
 
 ## 1️⃣ Clone Repository
 
-git clone https://github.com/your-repo/livestock-health-sentinel.git cd
+git clone https://github.com/Mahakisore7/Smart-Livestock-Management.git cd
 livestock-health-sentinel
 
 ## 2️⃣ Install Dependencies
