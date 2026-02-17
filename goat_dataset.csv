@@ -1,0 +1,40 @@
+Coughing,Symptom_1,Symptom_2,Symptom_3,Symptom_4,Body_Temperature,Disease_Prediction
+No,Diarrhea,Dehydration,Lethargy,Loss of Appetite,39.3°C,Coccidiosis
+No,Fever,Lethargy,Weight Loss,Loss of Appetite,39.7°C,Caprine Arthritis Encephalitis
+No,Diarrhea,Dehydration,Lethargy,Appetite Loss,39.4°C,Giardiasis
+Yes,Diarrhea,Dehydration,Lethargy,Appetite Loss,39.3°C,Coccidiosis
+No,Nasal Discharge,Fever,Weight Loss,Loss of Appetite,39.2°C,Caprine Respiratory Disease
+No,Diarrhea,Loss of Appetite,Lethargy,Dehydration,39.2°C,Gastrointestinal Infection
+Yes,Vomiting,Diarrhea,Fever,Loss of Appetite,39.0°C,Caprine Arthritis Encephalitis
+No,Fever,Vomiting,Diarrhea,Appetite Loss,39.5°C,Caprine Pleuropneumonia
+Yes,Vomiting,Fever,Loss of Appetite,Lethargy,39.3°C,Caprine Respiratory Disease
+No,Vomiting,Fever,Diarrhea,Loss of Appetite,39.4°C,Caprine Pleuropneumonia
+Yes,Vomiting,Fever,Loss of Appetite,Lethargy,39.2°C,Caprine Arthritis Encephalitis
+No,Vomiting,Diarrhea,Loss of Appetite,Fever,39.6°C,Caprine Pleuropneumonia
+Yes,Vomiting,Diarrhea,Loss of Appetite,Fever,39.4°C,Caprine Arthritis Encephalitis
+Yes,Vomiting,Loss of Appetite,Lethargy,Fever,39.6°C,Caprine Pleuropneumonia
+Yes,Vomiting,Loss of Appetite,Lethargy,Fever,39.5°C,Caprine Pleuropneumonia
+Yes,Vomiting,Loss of Appetite,Lethargy,Fever,39.6°C,Pneumonia
+Yes,Vomiting,Loss of Appetite,Lethargy,Fever,39.7°C,Caprine Viral Arthritis
+Yes,Vomiting,Diarrhea,Loss of Appetite,Fever,39.5°C,Caseous Lymphadenitis
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.6°C,Caprine Arthritis Encephalitis
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.8°C,Pneumonia
+No,Vomiting,Diarrhea,Lethargy,Fever,39.6°C,Caprine Arthritis
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.6°C,Pneumonia
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.7°C,Foot-and-Mouth Disease
+No,Vomiting,Diarrhea,Lethargy,Fever,39.8°C,Caprine Arthritis Encephalitis
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.6°C,Caprine Arthritis Encephalitis
+No,Vomiting,Diarrhea,Lethargy,Fever,39.7°C,Pneumonia
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.5°C,Foot-and-Mouth Disease
+No,Vomiting,Diarrhea,Lethargy,Fever,39.6°C,Caprine Arthritis Encephalitis Virus
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.7°C,Pneumonia
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.6°C,Caprine Arthritis Encephalitis Virus
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.7°C,Caprine Arthritis Encephalitis
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.7°C,Caprine Arthritis Encephalitis
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.6°C,Caprine Respiratory Disease
+No,Vomiting,Diarrhea,Lethargy,Fever,39.5°C,Caprine Arthritis Encephalitis
+No,Vomiting,Diarrhea,Lethargy,Fever,39.6°C,Goat Pox
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.5°C,Caprine Arthritis Encephalitis
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.4°C,Caprine Arthritis Encephalitis
+No,Vomiting,Diarrhea,Lethargy,Fever,39.5°C,Caprine Viral Arthritis
+Yes,Vomiting,Diarrhea,Lethargy,Fever,39.5°C,Caprine Respiratory Disease

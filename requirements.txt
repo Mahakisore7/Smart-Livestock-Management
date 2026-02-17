@@ -1,0 +1,8 @@
+numpy
+pandas
+pyaudio
+ai-edge-litert
+telepot
+smbus2
+gpiozero
+lgpio
