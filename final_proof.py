@@ -13,7 +13,6 @@ def process_animal(file_path, animal_type):
         # --- 1. HANDLE GOAT DATA (200 Hz, Columns: ax, ay, az) ---
         if animal_type == "GOAT":
             # Calculate Energy: sqrt(ax^2 + ay^2 + az^2)
-            # The PDF says columns are 'ax', 'ay', 'az'
             df['Energy'] = np.sqrt(df['ax']**2 + df['ay']**2 + df['az']**2)
             
             # This data is 200Hz (too fast). We take every 20th row 
@@ -22,7 +21,6 @@ def process_animal(file_path, animal_type):
             
         # --- 2. HANDLE COW DATA (10 Hz, Columns: acc_x, acc_y, acc_z) ---
         elif animal_type == "COW":
-            # The Image says columns are 'acc_x', 'acc_y', 'acc_z'
             df['Energy'] = np.sqrt(df['acc_x']**2 + df['acc_y']**2 + df['acc_z']**2)
 
         # Take first 300 points (which is now ~30 seconds for both)
@@ -37,12 +35,12 @@ def process_animal(file_path, animal_type):
         print(f"Error processing {animal_type}: {e}")
         return None, None
 
-# --- EXECUTE ---
+
 print("Reading Data...")
 goat_energy, goat_base = process_animal(goat_file, "GOAT")
 cow_energy, cow_base   = process_animal(cow_file, "COW")
 
-# --- PLOT ---
+
 if goat_energy is not None and cow_energy is not None:
     plt.figure(figsize=(10, 6))
     
