@@ -1,0 +1,107 @@
+{
+  "Foot and Mouth Disease": {
+    "exams": ["Check for blisters/sores on mouth and tongue", "Examine hooves for heat or lameness", "Watch for excessive drooling"],
+    "actions": ["Total quarantine of the farm", "Notify local veterinary authorities immediately", "Disinfect all entry/exit points"],
+    "priority": "CRITICAL"
+  },
+  "Mastitis": {
+    "exams": ["Check udder for redness, hardness, or pain", "Check milk for clots, flakes, or watery consistency", "Observe for kick-back during milking"],
+    "actions": ["Milk the affected cow last", "Consult vet for intramammary antibiotics", "Apply warm compresses to udder"],
+    "priority": "HIGH"
+  },
+  "Bovine Mastitis": {
+    "exams": ["Check udder for heat and swelling", "Visual inspection of milk quality", "Check for reduced milk yield"],
+    "actions": ["Isolate from milking line", "Increase hygiene in bedding area", "Vet consultation for treatment"],
+    "priority": "HIGH"
+  },
+  "Bovine Respiratory Disease": {
+    "exams": ["Check for nasal discharge", "Monitor respiratory rate (breaths/min)", "Look for drooping ears"],
+    "actions": ["Isolate to a well-ventilated, dry area", "Administer electrolytes", "Reduce dust in feed"],
+    "priority": "CRITICAL"
+  },
+  "Bovine Respiratory Disease Complex": {
+    "exams": ["Check for labored breathing", "Observe for eye discharge", "Listen for deep coughs"],
+    "actions": ["Immediate isolation", "Broad-spectrum supportive care", "Monitor herd-wide temperature"],
+    "priority": "CRITICAL"
+  },
+  "Bovine Pneumonia": {
+    "exams": ["Listen for crackling sounds in lungs", "Check for flared nostrils", "Observe for extended neck while breathing"],
+    "actions": ["Provide immediate warmth and dry bedding", "Isolate from drafts", "Strict rest"],
+    "priority": "CRITICAL"
+  },
+  "Respiratory Syncytial Virus": {
+    "exams": ["Check for high fever and clear nasal discharge", "Observe for sudden 'honking' cough", "Check for open-mouth breathing"],
+    "actions": ["Reduce handling stress", "Ensure high-quality forage", "Supportive hydration"],
+    "priority": "HIGH"
+  },
+  "Bovine Respiratory Syncytial Virus": {
+    "exams": ["Check for high fever", "Monitor for rapid, shallow breathing", "Observe for decreased appetite"],
+    "actions": ["Isolate immediately", "Consult vet for viral management", "Maintain hydration"],
+    "priority": "HIGH"
+  },
+  "Johne's Disease": {
+    "exams": ["Monitor for persistent diarrhea despite good appetite", "Check for rapid weight loss", "Observe for 'bottle jaw' (swelling under jaw)"],
+    "actions": ["Strict isolation of manure from youngstock", "Cull severely affected animals", "Sanitize water sources"],
+    "priority": "MODERATE"
+  },
+  "Bovine Johne's Disease": {
+    "exams": ["Check for extreme wasting/weight loss", "Monitor chronic diarrhea", "Observe for lethargy"],
+    "actions": ["Separate from calves immediately", "Consult on herd-testing strategy", "Strict hygiene"],
+    "priority": "MODERATE"
+  },
+  "Salmonellosis": {
+    "exams": ["Check for foul-smelling diarrhea with blood/mucus", "Monitor for rapid dehydration", "Check for sudden drop in milk"],
+    "actions": ["Intensive electrolyte therapy", "Disinfect pens with chlorine-based cleaners", "Isolate away from water supplies"],
+    "priority": "HIGH"
+  },
+  "Bovine Viral Diarrhea": {
+    "exams": ["Check for ulcers in mouth/muzzle", "Monitor for fever and mild diarrhea", "Observe for nasal/eye discharge"],
+    "actions": ["Test herd for 'persistently infected' animals", "Vaccinate healthy animals", "Isolate sick individuals"],
+    "priority": "HIGH"
+  },
+  "Cryptosporidiosis": {
+    "exams": ["Check for yellowish/watery diarrhea", "Monitor for dehydration in calves", "Observe for straining"],
+    "actions": ["Strict hygiene in calf pens", "Provide oral rehydration therapy", "Steam-clean equipment"],
+    "priority": "HIGH"
+  },
+  "Bovine Leukemia Virus": {
+    "exams": ["Check for enlarged lymph nodes (neck/flank)", "Observe for weight loss", "Check for bulging eyes"],
+    "actions": ["Use single-use needles for all injections", "Control biting insects", "Consult on testing/culling"],
+    "priority": "MODERATE"
+  },
+  "Bovine Coccidiosis": {
+    "exams": ["Check for dark, tarry, or bloody diarrhea", "Observe for 'straining' behavior", "Check for anemia (pale gums)"],
+    "actions": ["Keep bedding dry and clean", "Avoid overcrowding", "Provide medicated water/feed as per vet"],
+    "priority": "HIGH"
+  },
+  "Coccidiosis": {
+    "exams": ["Check for watery/bloody feces", "Monitor for reduced growth", "Observe for rough coat"],
+    "actions": ["Clean water troughs frequently", "Provide dry areas to rest", "Isolate clinical cases"],
+    "priority": "HIGH"
+  },
+  "Tuberculosis": {
+    "exams": ["Check for chronic, intermittent cough", "Observe for gradual emaciation", "Monitor for low-grade fever"],
+    "actions": ["Immediate isolation", "Mandatory notification of government vets", "Prepare for herd testing"],
+    "priority": "CRITICAL"
+  },
+  "Bovine Tuberculosis": {
+    "exams": ["Monitor for persistent dry cough", "Check for swollen lymph nodes", "Observe for progressive weakness"],
+    "actions": ["Restrict all animal movement", "Quarantine the farm", "Consult authorities"],
+    "priority": "CRITICAL"
+  },
+  "Bovine Influenza": {
+    "exams": ["Check for sudden high fever", "Observe for clear nasal discharge", "Monitor for sudden drop in milk yield"],
+    "actions": ["Provide dust-free bedding", "Ensure plenty of fresh water", "Monitor for secondary pneumonia"],
+    "priority": "HIGH"
+  },
+  "Bovine Parainfluenza": {
+    "exams": ["Check for mild cough", "Observe for clear nasal discharge", "Monitor for secondary infections"],
+    "actions": ["Reduce stress", "Ensure good ventilation", "Monitor temperature daily"],
+    "priority": "MODERATE"
+  },
+  "Healthy": {
+    "exams": ["General observation of coat and behavior"],
+    "actions": ["Maintain normal feeding and monitoring"],
+    "priority": "LOW"
+  }
+}

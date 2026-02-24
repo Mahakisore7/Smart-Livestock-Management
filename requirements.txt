@@ -1,0 +1,9 @@
+streamlit
+pandas
+plotly
+numpy
+pyaudio
+google-genai
+smbus2
+gpiozero
+ai-edge-litert
