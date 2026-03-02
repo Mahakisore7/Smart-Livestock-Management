@@ -12,6 +12,19 @@
         ],
         "priority": "CRITICAL"
     },
+    "FMD": {
+        "exams": [
+            "Check for blisters/sores on mouth and tongue",
+            "Examine hooves for heat or lameness",
+            "Watch for excessive drooling"
+        ],
+        "actions": [
+            "Total quarantine of the farm",
+            "Notify local veterinary authorities immediately",
+            "Disinfect all entry/exit points"
+        ],
+        "priority": "CRITICAL"
+    },
     "Mastitis": {
         "exams": [
             "Check udder for heat and swelling",
@@ -51,6 +64,19 @@
         ],
         "priority": "CRITICAL"
     },
+    "Pneumonia": {
+        "exams": [
+            "Thoracic auscultation for crackling/wheezing",
+            "Check for labored breathing and nasal discharge",
+            "Assess core temperature trends"
+        ],
+        "actions": [
+            "Move to well-ventilated quarantine pen",
+            "Provide systemic antibiotics and NSAIDs per vet",
+            "Ensure dry, draft-free bedding"
+        ],
+        "priority": "HIGH"
+    },
     "RSV": {
         "exams": [
             "Check for mild cough",
@@ -71,7 +97,7 @@
             "Observe for lethargy"
         ],
         "actions": [
-            "Separate from calves immediately",
+            "Separate from calves/kids immediately",
             "Consult on herd-testing strategy",
             "Strict hygiene"
         ],
@@ -106,11 +132,11 @@
     "Cryptosporidiosis": {
         "exams": [
             "Check for yellowish/watery diarrhea",
-            "Monitor for dehydration in calves",
+            "Monitor for dehydration in calves/kids",
             "Observe for straining"
         ],
         "actions": [
-            "Strict hygiene in calf pens",
+            "Strict hygiene in calf/kid pens",
             "Provide oral rehydration therapy",
             "Steam-clean equipment"
         ],
@@ -133,11 +159,11 @@
         "exams": [
             "Check for watery/bloody feces",
             "Monitor for reduced growth",
-            "Observe for rough coat"
+            "Observe for rough coat or soiled hindquarters"
         ],
         "actions": [
             "Clean water troughs frequently",
-            "Provide dry areas to rest",
+            "Administer coccidiostats (e.g., Amprolium)",
             "Isolate clinical cases"
         ],
         "priority": "HIGH"
@@ -151,7 +177,7 @@
         "actions": [
             "Restrict all animal movement",
             "Quarantine the farm",
-            "Consult authorities"
+            "Consult authorities immediately"
         ],
         "priority": "CRITICAL"
     },
@@ -168,12 +194,99 @@
         ],
         "priority": "HIGH"
     },
-    "Healthy": {
+    "CAE": {
         "exams": [
-            "General observation of coat and behavior"
+            "Check carpal joints for swelling or stiffness",
+            "Assess for neurological deficits in kids",
+            "Palpate udder for hard induration"
         ],
         "actions": [
-            "Maintain normal feeding and monitoring"
+            "Separate from main herd",
+            "Do not feed unpasteurized colostrum to kids",
+            "Provide supportive joint care"
+        ],
+        "priority": "HIGH"
+    },
+    "CCPP": {
+        "exams": [
+            "Listen for pleural friction rubs",
+            "Check for frothy nasal discharge",
+            "Assess for severe dyspnea/labored breathing"
+        ],
+        "actions": [
+            "Strict quarantine of flock",
+            "Administer macrolide antibiotics immediately",
+            "Notify state vet authorities"
+        ],
+        "priority": "CRITICAL"
+    },
+    "CRD": {
+        "exams": [
+            "Check for mild coughing or sneezing",
+            "Assess nasal discharge",
+            "Monitor temperature trends"
+        ],
+        "actions": [
+            "Separate from healthy flock",
+            "Ensure dry, draft-free housing",
+            "Consider targeted antibiotic therapy"
+        ],
+        "priority": "MEDIUM"
+    },
+    "Caseous Lymphadenitis": {
+        "exams": [
+            "Palpate external lymph nodes (jaw, neck, flank) for hard abscesses"
+        ],
+        "actions": [
+            "Isolate animal immediately",
+            "Do NOT lance abscess in common pasture/pens",
+            "Consider culling if severe"
+        ],
+        "priority": "HIGH"
+    },
+    "GI Infection": {
+        "exams": [
+            "Assess fecal consistency (scours)",
+            "Check FAMACHA score for anemia",
+            "Check for signs of bloat or abdominal pain"
+        ],
+        "actions": [
+            "Provide oral electrolytes",
+            "Targeted deworming if parasitic",
+            "Adjust roughage intake"
+        ],
+        "priority": "MEDIUM"
+    },
+    "Giardiasis": {
+        "exams": [
+            "Observe for chronic, foul-smelling diarrhea",
+            "Check for dehydration in young stock"
+        ],
+        "actions": [
+            "Administer Fenbendazole/treatment per vet",
+            "Disinfect water troughs",
+            "Isolate affected young kids/calves"
+        ],
+        "priority": "MEDIUM"
+    },
+    "Goat Pox": {
+        "exams": [
+            "Check skin (ears, muzzle, udder) for papules or scabs",
+            "Assess for systemic fever and lethargy"
+        ],
+        "actions": [
+            "Strict isolation of affected animals",
+            "Provide soft feed and water",
+            "Prevent secondary bacterial skin infections"
+        ],
+        "priority": "HIGH"
+    },
+    "Healthy": {
+        "exams": [
+            "General observation of coat, posture, and behavior"
+        ],
+        "actions": [
+            "Maintain normal feeding and automated sensor monitoring"
         ],
         "priority": "LOW"
     }

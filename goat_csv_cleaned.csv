@@ -1,0 +1,40 @@
+lethargy,coughing,temperature,disease
+1,0,39.3,Coccidiosis
+1,0,39.7,Caprine Arthritis Encephalitis
+1,0,39.4,Giardiasis
+1,1,39.3,Coccidiosis
+0,0,39.2,Caprine Respiratory Disease
+1,0,39.2,Gastrointestinal Infection
+0,1,39.0,Caprine Arthritis Encephalitis
+0,0,39.5,Caprine Pleuropneumonia
+1,1,39.3,Caprine Respiratory Disease
+0,0,39.4,Caprine Pleuropneumonia
+1,1,39.2,Caprine Arthritis Encephalitis
+0,0,39.6,Caprine Pleuropneumonia
+0,1,39.4,Caprine Arthritis Encephalitis
+1,1,39.6,Caprine Pleuropneumonia
+1,1,39.5,Caprine Pleuropneumonia
+1,1,39.6,Pneumonia
+1,1,39.7,Caprine Viral Arthritis
+0,1,39.5,Caseous Lymphadenitis
+1,1,39.6,Caprine Arthritis Encephalitis
+1,1,39.8,Pneumonia
+1,0,39.6,Caprine Arthritis
+1,1,39.6,Pneumonia
+1,1,39.7,Foot-and-Mouth Disease
+1,0,39.8,Caprine Arthritis Encephalitis
+1,1,39.6,Caprine Arthritis Encephalitis
+1,0,39.7,Pneumonia
+1,1,39.5,Foot-and-Mouth Disease
+1,0,39.6,Caprine Arthritis Encephalitis Virus
+1,1,39.7,Pneumonia
+1,1,39.6,Caprine Arthritis Encephalitis Virus
+1,1,39.7,Caprine Arthritis Encephalitis
+1,1,39.7,Caprine Arthritis Encephalitis
+1,1,39.6,Caprine Respiratory Disease
+1,0,39.5,Caprine Arthritis Encephalitis
+1,0,39.6,Goat Pox
+1,1,39.5,Caprine Arthritis Encephalitis
+1,1,39.4,Caprine Arthritis Encephalitis
+1,0,39.5,Caprine Viral Arthritis
+1,1,39.5,Caprine Respiratory Disease
