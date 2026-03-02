@@ -1,0 +1,69 @@
+lethargy,coughing,temperature,disease
+0,1,40.1,Foot and Mouth Disease
+1,0,39.6,Mastitis
+1,0,39.7,Bovine Respiratory Disease
+1,0,39.5,Mastitis
+1,1,39.8,Bovine Respiratory Disease
+1,1,39.6,Mastitis
+1,0,39.4,Johne's Disease
+1,0,39.7,Salmonellosis
+0,1,39.9,Bovine Respiratory Disease
+1,0,39.1,Bovine Viral Diarrhea
+1,1,39.6,Mastitis
+1,1,39.5,Cryptosporidiosis
+1,0,39.8,Bovine Leukemia Virus
+1,1,39.3,Bovine Coccidiosis
+1,1,39.4,Bovine Respiratory Syncytial Virus
+1,1,39.9,Bovine Pneumonia
+1,0,39.5,Johne's Disease
+1,1,39.4,Salmonellosis
+1,1,39.8,Respiratory Syncytial Virus
+1,0,39.4,Tuberculosis
+1,0,39.3,Coccidiosis
+0,0,39.9,Bovine Influenza
+1,1,39.4,Johne's Disease
+1,1,40.0,Bovine Respiratory Disease
+1,0,39.3,Bovine Johne's Disease
+0,0,39.4,Bovine Tuberculosis
+0,1,39.6,Bovine Respiratory Disease
+0,1,39.4,Bovine Tuberculosis
+1,1,39.3,Bovine Johne's Disease
+0,1,39.4,Bovine Respiratory Disease
+1,0,39.6,Bovine Tuberculosis
+1,1,39.5,Bovine Johne's Disease
+1,0,39.5,Bovine Viral Diarrhea
+1,1,39.3,Bovine Respiratory Syncytial Virus
+1,1,39.1,Bovine Tuberculosis
+1,0,39.2,Bovine Respiratory Disease
+1,1,39.1,Bovine Tuberculosis
+1,1,39.1,Bovine Tuberculosis
+1,1,39.3,Bovine Respiratory Syncytial Virus
+1,1,39.3,Bovine Viral Diarrhea
+1,0,39.2,Bovine Tuberculosis
+1,0,39.3,Bovine Respiratory Disease
+1,0,39.0,Bovine Parainfluenza
+1,0,39.4,Bovine Tuberculosis
+1,0,39.2,Bovine Viral Diarrhea
+1,0,39.3,Bovine Tuberculosis
+1,0,39.4,Bovine Tuberculosis
+1,0,39.5,Bovine Respiratory Disease Complex
+1,0,39.6,Johne's Disease
+1,1,39.4,Bovine Johne's Disease
+1,1,39.6,Bovine Tuberculosis
+1,0,39.2,Bovine Respiratory Disease
+1,0,39.3,Bovine Tuberculosis
+1,1,39.5,Bovine Johne's Disease
+1,1,39.5,Bovine Respiratory Disease Complex
+1,1,39.3,Bovine Tuberculosis
+1,1,39.5,Bovine Respiratory Disease Complex
+1,1,39.4,Bovine Respiratory Disease
+1,1,39.5,Bovine Tuberculosis
+1,1,39.3,Bovine Respiratory Disease
+1,1,39.2,Bovine Mastitis
+1,1,39.4,Bovine Respiratory Disease
+1,1,39.4,Bovine Respiratory Disease
+1,0,39.2,Bovine Mastitis
+1,1,39.4,Bovine Respiratory Disease
+1,1,39.4,Bovine Tuberculosis
+0,1,40.1,Foot and Mouth Disease
+1,0,39.6,Mastitis
